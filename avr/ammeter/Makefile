@@ -15,6 +15,6 @@ MK_avrdude_PROG    	?= avr109
 MK_AVR_FUSES_m32u4   = C3 D0 FC
 					  
 MK_HEX_TARGET	= ammeter
-MK_SRC_FILES	= ammeter.c Delay.c Log.c StrPrintf.o Timer.c i2cmaster.c
+MK_SRC_FILES	= ammeter.c Delay.c Log.c StrPrintf.o Timer.c UART.c adc.c i2cmaster.c
 
 include ../../rules/mkRules.mk

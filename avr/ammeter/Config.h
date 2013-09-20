@@ -16,12 +16,14 @@
 #if !defined( CONFIG_H )
 #define CONFIG_H
 
-#define CFG_USE_UART0               1
-#define CFG_UART0_BAUD_RATE         19200
-#define CFG_UART0_RX_BUFFER_SIZE    64
-#define CFG_UART0_TX_BUFFER_SIZE    64
-#define CFG_UART0_LF_TO_CRLF        1
+#define CFG_USE_UART1               1
+#define CFG_UART1_BAUD_RATE         57600
+#define CFG_UART1_RX_BUFFER_SIZE    64
+#define CFG_UART1_TX_BUFFER_SIZE    64
+#define CFG_UART1_LF_TO_CRLF        1
+
+#define CFG_ADC_8_BIT               0
+#define CFG_ADC_POLL                0
+#define CFG_ADC_AVERAGE             1
 
 #endif  // CONFIG_H
-
-
