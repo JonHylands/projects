@@ -1,6 +1,6 @@
 ###########################################################################
 #
-# flasher-32u4 Makefile
+# Ammeter Makefile
 #
 ###########################################################################
 
@@ -13,7 +13,7 @@ MK_avrdude_PROG    	?= avr109
 
 # Extended fuse byte should be FB for standalone, FA for bootloader-stk500
 MK_AVR_FUSES_m32u4   = C3 D0 FC
-					  
+
 MK_HEX_TARGET	= ammeter
 MK_SRC_FILES	= ammeter.c Delay.c Log.c StrPrintf.o Timer.c UART.c adc.c i2cmaster.c
 

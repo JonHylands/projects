@@ -28,17 +28,17 @@
 #define MOSI_PORT   PORTB
 #define MOSI_MASK   ( 1 << 2 )
 
-#define MISO_DDR	DDRB
-#define MISO_PORT   PORTB
-#define MISO_PIN	PINB
-#define MISO_MASK   ( 1 << 3 )
+#define MISO_DDR	DDRD
+#define MISO_PORT   PORTD
+#define MISO_PIN	PIND
+#define MISO_MASK   ( 1 << 1 )
 
-#define SCK_DDR	 DDRB
-#define SCK_PORT	PORTB
-#define SCK_MASK	( 1 << 1 )
+#define SCK_DDR	 DDRD
+#define SCK_PORT	PORTD
+#define SCK_MASK	( 1 << 5 )
 
-#define SS_DDR	 DDRB
-#define SS_PORT	PORTB
+#define SS_DDR	 DDRD
+#define SS_PORT	PORTD
 #define SS_MASK	( 1 << 0 )
 
 #define SPI_CLOCK_TIME 10
@@ -202,7 +202,7 @@ int main( void )
 		uint16_t value = SPI_DoConversion();
 // 		printf ("%d\n", value);
 		uint16_t current = value / 20;
-		uint16_t voltageValue = ADC_Read (1);
+		uint16_t voltageValue = ADC_Read (0);
 		int16_t voltage = voltageValue * 5;
 		printf ("(%u) %u mA - %d mV\n", value, current, voltage);
 	}
